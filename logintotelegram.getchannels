@@ -1,0 +1,34 @@
+# give example python script log into telegram via telethon library and list channels
+
+# example python script to log into telegram via telethon library and list channels
+
+# import the Telethon library
+from telethon import TelegramClient
+
+# your api_id, api_hash and phone number
+api_id = 123456
+api_hash = 'your_api_hash'
+phone_number = '1234567890'
+
+# create a Telegram Client
+client = TelegramClient(phone_number, api_id, api_hash)
+
+# connect to Telegram server
+client.connect()
+
+# if connected successfully, print message
+if client.is_user_authorized():
+    print('Connected to Telegram successfully!')
+
+# start a new session
+client.start()
+
+# list all the channels
+channels = client.get_dialogs()
+
+# print the list of channels
+for channel in channels:
+    print(channel.title)
+
+# disconnect from Telegram
+client.disconnect()
