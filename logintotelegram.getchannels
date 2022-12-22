@@ -1,6 +1,5 @@
-# give example python script log into telegram via telethon library and list channels
+# example python script log into telegram via telethon library and list channels
 
-# example python script to log into telegram via telethon library and list channels
 
 # import the Telethon library
 from telethon import TelegramClient
